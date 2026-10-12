@@ -395,7 +395,7 @@ curl -X POST http://127.0.0.1:8000/api/channels/1/send_message/ \
 
 ---
 
-## 👤 Автор
+## Автор
 
 Азалия — [github.com/azaliia-yu](https://github.com/azaliia-yu)
 ```
