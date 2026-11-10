@@ -296,3 +296,70 @@
   max-width: 80vw;
   z-index: 100;
 }
+/* ===== Файлы, галочки, непрочитанные (добавлено) ===== */
+.m-message-file {
+  display: inline-block;
+  margin: 4px 0;
+  color: #2481cc;
+  text-decoration: none;
+  word-break: break-all;
+  font-size: 14px;
+}
+.m-message-file:hover { text-decoration: underline; }
+
+.m-ticks {
+  font-size: 12px;
+  color: #999999;
+  margin-left: 6px;
+}
+.m-ticks.read { color: #4caf50; }
+
+.m-message-time {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+.m-message-form .m-attach-btn {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: #517da2;
+  font-size: 22px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.m-message-form .m-attach-btn:active { background: #f1f3f5; }
+
+.m-file-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: #f1f3f5;
+  font-size: 13px;
+  color: #333;
+  border-top: 1px solid #dfe1e5;
+}
+.m-file-chip-x {
+  margin-left: auto;
+  cursor: pointer;
+  color: #999;
+  font-size: 18px;
+  line-height: 1;
+}
+.m-file-chip-x:hover { color: #e53935; }
+
+.m-unread-badge {
+  background: #4caf50;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 2px 8px;
+  margin-right: 4px;
+  flex-shrink: 0;
+}

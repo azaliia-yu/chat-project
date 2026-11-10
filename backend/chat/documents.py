@@ -17,6 +17,8 @@ message_index.settings(number_of_shards=1, number_of_replicas=0)
 class ChannelDocument(Document):
     name = fields.TextField()
     description = fields.TextField()
+    created_by_client_id = fields.KeywordField()
+    is_public = fields.BooleanField()
     created_at = fields.DateField()
 
     class Django:
@@ -28,15 +30,14 @@ class ChannelDocument(Document):
 @message_index.document
 class MessageDocument(Document):
     text = fields.TextField()
+    file_name = fields.KeywordField()
+    author_client_id = fields.KeywordField()
+    author_name = fields.TextField()
     created_at = fields.DateField()
 
     channel = fields.ObjectField(properties={
         'id': fields.IntegerField(),
         'name': fields.TextField(),
-    })
-    author = fields.ObjectField(properties={
-        'id': fields.IntegerField(),
-        'username': fields.TextField(),
     })
 
     class Django:
